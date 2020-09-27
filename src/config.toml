@@ -1,0 +1,32 @@
+[api_url]
+get_fields = "/api/v2/ticket_fields.json"
+post_many = "/api/v2/tickets/create_many.json"
+
+[credentials]
+api_token = "tokengoeshere"
+email = "john.doe@gmail.com"
+subdomain = "subdomain"
+
+[worksheet]
+name = "Sheet 1"
+top_row = 5
+# must be one of { Acre, DeNoronha, East, West }
+# Horario de Brasilia é East
+timezone = "East"
+
+# fields are case sensitive
+[ticket]
+    [ticket.system_fields]
+        comment = "B"  # mandatory field
+        subject = "A"
+	description = "D"
+	status = "E"
+	priority = "C"
+	tickettype = "F"
+	assignee = "G"
+    [ticket.custom_fields]
+        CPF = "H"
+        Carteira = "I"
+	"Data de criação inicial" = "J"
+	"campo decimal" = "K"
+	# checkbox = "K"
